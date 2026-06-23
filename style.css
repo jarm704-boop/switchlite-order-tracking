@@ -193,5 +193,17 @@ body {
 
 @media (max-width: 480px) {
   .card { padding: 24px 20px; }
-  .tl-label { display: none; }
+  .timeline { margin-bottom: 36px; }
+  .tl-step { gap: 6px; }
+  .tl-label {
+    font-size: 8px;
+    max-width: 48px;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .tl-label { font-size: 7.5px; max-width: 42px; }
 }
