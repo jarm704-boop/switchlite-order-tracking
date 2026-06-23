@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Track Your Order — Switchlite</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <header class="hdr">
+    <img src="logo.png" alt="Switchlite" class="hdr-logo" onerror="this.style.display='none'">
+    <span class="hdr-title">Order Tracking</span>
+  </header>
+
+  <main class="wrap">
+
+    <!-- Lookup form -->
+    <section class="card lookup-card" id="lookup-card">
+      <h1>Track your order</h1>
+      <p class="sub">Enter the tracking code and PIN from your confirmation email.</p>
+      <form id="lookup-form" autocomplete="off">
+        <label>
+          <span>Tracking code</span>
+          <input id="in-code" type="text" placeholder="e.g. SL-1042" required>
+        </label>
+        <label>
+          <span>PIN</span>
+          <input id="in-pin" type="text" inputmode="numeric" placeholder="4–6 digits" required>
+        </label>
+        <button type="submit" id="lookup-btn">Track Order</button>
+        <div class="err" id="lookup-err"></div>
+      </form>
+    </section>
+
+    <!-- Result -->
+    <section class="card result-card hidden" id="result-card">
+      <button class="back-btn" id="back-btn">&larr; Track another order</button>
+
+      <h1 id="r-product"></h1>
+      <div class="meta" id="r-invoice"></div>
+
+      <div class="timeline" id="r-timeline"></div>
+
+      <div class="grid">
+        <div class="stat">
+          <span class="stat-label">ETA</span>
+          <span class="stat-value" id="r-eta">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Shipping status</span>
+          <span class="stat-value" id="r-shipping">—</span>
+        </div>
+      </div>
+
+      <a id="r-courier" class="courier-btn hidden" href="#" target="_blank" rel="noopener">Track with courier &rarr;</a>
+
+      <div class="notes hidden" id="r-notes-wrap">
+        <span class="notes-label">Notes from Switchlite</span>
+        <p id="r-notes"></p>
+      </div>
+
+      <div class="install-card hidden" id="r-install-wrap">
+        <div class="install-hdr">
+          <span>Installation</span>
+          <span class="badge" id="r-install-status"></span>
+        </div>
+        <div class="grid">
+          <div class="stat">
+            <span class="stat-label">Install date</span>
+            <span class="stat-value" id="r-install-date">To be scheduled</span>
+          </div>
+        </div>
+        <p class="install-notes" id="r-install-notes"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="ftr">
+    Questions about your order? <a href="https://www.switchlite.co.nz/contact">Contact Switchlite</a>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
