@@ -1,5 +1,5 @@
 // Paste the Apps Script Web App /exec URL here after deploying apps_script.gs.
-const API_URL = 'PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE';
+const API_URL = 'https://script.google.com/macros/s/AKfycbwNZz07c5eO7Vsp3nM2m97eupTi0oZ-a5a_-yKPx0Ak5QRAlAqLFzVkmPF919jEkClT/exec';
 
 const STAGES = ['Order Confirmed', 'In Production', 'Quality Check', 'Shipped', 'Out for Delivery', 'Delivered'];
 
